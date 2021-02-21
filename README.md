@@ -4,7 +4,7 @@ A docker image providing the ElasticBeanstalk CLI tools.
 
 ## Description
 
-This builds a docker container for the ebcli tools. The intent is to keep 
+This builds a docker container for the ebcli tools. The intent is to keep
 the ebcli dependencies separate from any other python environment due to
 conflicts that can occur between the ebcli and other tools such as the aws-cli.
 
@@ -16,7 +16,7 @@ The build follows the installation directions from [the aws elastic beanstalk cl
 ## Build the image
 
 ```shell
-docker build -t adamaig/awsebcli:2 .
+docker build -t adamaig/aws-ebcli:2 .
 ```
 
 ## Usage
@@ -24,5 +24,5 @@ docker build -t adamaig/awsebcli:2 .
 Add an alias to your shell similar to this:
 
 ```shell
-alias ebcli="docker run --rm -it -v ${PWD}:/root/work adamaig/awsebcli:2 eb"
+alias ebcli="docker run --rm -it -v ${PWD}:/root/work adamaig/aws-ebcli:2 eb"
 ```
