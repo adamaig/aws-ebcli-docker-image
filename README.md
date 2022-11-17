@@ -24,5 +24,7 @@ docker build -t adamaig/aws-ebcli:2 .
 Add an alias to your shell similar to this:
 
 ```shell
-alias ebcli="docker run --rm -it -v ${PWD}:/root/work adamaig/aws-ebcli:2 eb"
+alias ebcli="docker run --rm -it -v ${PWD}:/root/work -v ~/.aws:/root/.aws -w/root/work adamaig/aws-ebcli:latest eb"
 ```
+
+*Note*: I prefer to name this `ebcli` instead of `eb`, but my alias preference needen't be yours.
